@@ -1,0 +1,201 @@
+@import 'nib'
+
+
+@font-face
+    font-family:Author One
+    src: url('/fonts/AutourOne-Regular.otf')
+
+*, h1, h2, h3
+    font-family: Author One
+
+html,body
+    height:100%
+
+footer
+    height:60px
+    background-color: white
+        
+
+@media (min-width: 767px)
+    #more #text h2
+        font-size 30px !important
+        text-transform none !important
+        span
+            text-transform uppercase
+    #content        
+        min-height: 600px
+        height: 100%
+        margin-bottom: -60px
+    #index
+        position relative
+        min-height 600px
+        height:100% 
+    #index-wrapper
+    #more
+    #codex
+        min-height 600px
+        height:100%        
+        background-size: 100% 100%;
+        background-position: center top;
+        background-repeat: no-repeat
+    #index-wrapper
+        background-image:url('/images/tlo.png')
+        #greeters
+            margin-left: 15vw
+            
+        ul
+            list-style-type: none
+            position: absolute;
+            left: -60px;
+            top: 240px
+            li
+                line-height: 150px
+                height: 150px
+                a                       
+                    background-color: white
+                    padding: 40px 10px 40px 5vw
+                    text-decoration: none
+                    transition: all .2s
+                    color #6d9429
+                    font-size: 35px
+                    border-radius: 20px
+                    &:hover
+                        color #7a4272
+                        padding-left: 7vw
+                        background-color: #6d9429 
+	                        
+                                
+        h1
+            position: absolute
+            bottom 20%
+            right 10vw
+            span
+                font-size: 50px
+                display: block
+                padding: 10px
+            #gdanski
+                background-color: #7a4272
+                color: #6d9429             
+                transform: rotate(-5deg)
+                margin-bottom: 20px
+                margin-left: -5vw
+            #greeter
+                background-color: #fff
+                color: #7a4272
+                transform: rotate(5deg)
+    
+    #more
+    #codex    
+        background-image:url('/images/tlo2.png')
+        #text
+            color #6d9429
+            position absolute
+            top 140px
+            right 3vw
+            width: 65vw
+            h2
+                text-align center
+                text-transform uppercase
+                font-size 40px
+            .nano
+                ol
+                    font-size 17px
+                    color: #fff
+                width: 100%
+                height 300px
+                .content
+                    display block
+                    padding: 10px
+                .pane 
+                    background #6d9429
+                    
+            p
+                color: #fff
+                font-size 15px
+    #sidebar
+        #greeters
+            width: 20vw
+        h1
+            margin-top 0
+            span
+                transition all 0.2s
+            &:hover
+                #greeter
+                    color #6d9429
+                #gdanski
+                    color: #7a4272
+        nav
+            ul
+                list-style-type none
+                li 
+                    margin: 60px 0px 60px -130px
+                    a
+                        background-color #6d9429
+                        color #7a4272
+                        text-decoration none
+                        padding: 20px 10px 20px 100px
+                        border-radius: 10px
+                        transition: all 0.2s
+                        &:hover, &.active
+                            color #6d9429
+                            background-color #7a4272
+                            margin-left 20px
+                        &:hover
+                            box-shadow: 0 0 1px 1px #999
+
+@media (min-width: 900px)
+    #index-wrapper h1 span
+        font-size: 60px
+    #sidebar h1
+        font-size 40px
+        
+@media (min-width: 1200px)
+    #index-wrapper h1 span
+        font-size: 80px
+    #sidebar h1
+        font-size 60px
+#sidebar
+    h1
+        a
+            text-decoration none
+            #gdanski
+                color #6d9429
+            #greeter
+                color: #7a4272
+@media (max-width: 768px)
+    #index a
+    #sidebar a
+        display block
+        width: 100%
+    h1
+        text-align center
+    #greeters
+        width 40%
+        margin 0 auto
+    #sidebar nav ul
+    #index nav ul
+        padding: 10px 0
+        list-style-type none
+        li
+            display block
+            text-align center
+            margin: 35px 0
+            a
+                background-color #7a4272
+                color #6d9429
+                padding: 15px 10px
+                text-decoration none
+                border-radius: 5px
+                &:hover
+                .active                    
+                    color #7a4272
+                    background-color #6d9429
+                
+    #index
+
+            #gdanski
+                color #6d9429
+            #greeter
+                color: #7a4272
+    .nano .content
+        position inherit

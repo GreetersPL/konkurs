@@ -1,0 +1,1 @@
+Handlebars.registerPartial("sidebar", require "views/templates/sidebar")
