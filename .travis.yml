@@ -6,10 +6,12 @@ install:
 - npm install
 - bower install
 after_success:
+- echo -n $id_rsa_{00..30} >> ~/.ssh/id_rsa_base64
+- base64 --decode --ignore-garbage ~/.ssh/id_rsa_base64 > ~/.ssh/id_rsa
 - echo -e "Host greeter\n\tStrictHostKeyChecking no\n\tHostname greeters.pl\n\tPort
   $PORT" >> ~/.ssh/config
-- chmod 600 .travis/deploy_key.pem
-- ssh-add .travis/deploy_key.pem
+- chmod 600 .ssh/id_rsa
+- ssh-add .ssh/id_rsa
 - git remote add deploy git@greeter:/~/konkurs.git
 - git push deploy
 env:
