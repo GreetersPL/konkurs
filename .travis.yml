@@ -9,7 +9,7 @@ after_success:
 - echo -e "Host greeter\n\tStrictHostKeyChecking no\n\tHostname greeters.pl\n\tPort Ynbp32Wv5ibOlCVT0xxOi/cnE9nVTDHrRuIus2g5FaSQBTgaJNcOlE+VNuRIrV1DRIXqnbo7YJ9Q3HrbdwM2zwn+J5bymb/FOISC9iFgaMdS0Zhzz+UtqzXubj2arm1Y/HyJ7xiWDnkHk8ftn+OggA77EjnAVDu5W+zG58zbROU=" >> ~/.ssh/config
 - chmod 600 .travis/deploy_key.pem
 - ssh-add .travis/deploy_key.pem
-- git remote add deploy git@greeter
+- git remote add deploy git@greeter/konkurs.git
 - git push deploy
 env:
   global:
