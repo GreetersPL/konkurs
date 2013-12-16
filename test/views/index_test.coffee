@@ -3,15 +3,20 @@ Index = require 'views/index'
 describe 'Index', ->
     before ->
         body = document.createElement 'body'
-        body.className = 'application'
+        
+        el = document.createElement 'div'
+        el.id = 'content'
+        document.body.appendChild(el)
 
         @index = new Index
-        @index.setElement body
+        @index.setElement el
 
     it 'should exist', ->
         expect(@index).to.be.ok
 
-    it 'should have the `body` element assign to the `el` property', ->
+    it 'should have the `body` element', ->
         expect(@index.$el).to.exist
-        expect(@index.$el.is 'body').to.be.true
-        expect(@index.$el).to.have.class 'application'
+        expect(@index.$el.is '#content').to.be.true
+    
+     it 'should have the `nav` element', ->
+        console.log(@index.el)
