@@ -6,10 +6,12 @@ install:
 - npm install
 - bower install
 after_success:
-- echo -e "Host greeter\n\tStrictHostKeyChecking no\n\tHostname greeters.pl\n\tPort $GIT_PORT" >> ~/.ssh/config
+- echo -e "Host greeter\n\tStrictHostKeyChecking no\n\tHostname greeters.pl\n\tPort
+  $PORT" >> ~/.ssh/config
 - chmod 600 .travis/deploy_key.pem
 - ssh-add .travis/deploy_key.pem
-- git remote add deploy git@greeter/konkurs.git
+- git remote add deploy git@greeter:/~/konkurs.git
 - git push deploy
-git_port:
-  secure: CkAL9SdYQIVEdtJV6Q8Lf8lpUO+PACHGHqfygLvdDgUmIc7yYoiHnnTtlxyCuQVGdyaYY8+cyrlFpaCtoQWCrNsgCMVeAH/Wxs88rFter942fTWz6hs17HWQBgPIBE4EBfdzi+n+wQyzflsh3N+jup3Th29U2qzONXZLIhvC4Mo=
+env:
+  global:
+    secure: Pl2ZVkW6brPBpQ8PlznK//FF7VA/+CPolifomVB1kpO1iWHk8dh0vdPw8H1moyNhSMzLSU0FgJSFMnghHxmyzPuSbW+2+8x44cHJJyqiRkvP0EnWIwh0t2Sk3OaLWWzKXh5MiUifu1Saudxqmvd8sDas+Z51C6Fx4egzBMIK5Bw=
